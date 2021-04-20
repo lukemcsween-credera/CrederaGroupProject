@@ -1,4 +1,7 @@
-public class CreateOrderCommand : IRequest<Order>  
+using GroupProjectApi.Modules.Cars.Models;
+using MediatR;
+
+public class CreateOrderCommand : IRequest<CarDto>  
 {  
-    public Order Order { get; set; }  
+    public CarDto Car { get; set; }  
 }  
