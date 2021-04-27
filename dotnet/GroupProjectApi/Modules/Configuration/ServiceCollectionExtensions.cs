@@ -16,7 +16,7 @@ namespace GroupProjectApi.Modules.Configuration {
             // Retrieve list of types that implement specified class/interface
             var serviceImplementations = GetAllImplementationsOfType<T>();
 
-            // Add each service as a transient
+            // Add each service class to DI container according to specified lifetime attribute type
             foreach (var serviceType in serviceImplementations) {
                 switch (serviceLifetime) {
                     case ServiceLifetime.Singleton: 

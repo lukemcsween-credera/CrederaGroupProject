@@ -1,3 +1,6 @@
 # .NET
 obj/
 bin/
+
+# VS
+.vs/
