@@ -30,10 +30,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
-		<!--TODO: determine DB and add DataSource config-->
-
-		<!--TODO question: do we give them lombok....-->
+		<!--TODO: Sub this out for another database-->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
