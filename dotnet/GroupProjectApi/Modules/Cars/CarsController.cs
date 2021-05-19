@@ -31,10 +31,9 @@ namespace GroupProjectApi.Modules.Cars
         public ActionResult<CarDto> GetCarById(int carId)
         {
           var matchingCar = _carsRepo.GetCarById(carId);
-          if (matchingCar != null)
-            return this.Ok(matchingCar);
-          else
-            return this.NotFound($"Could not find car with CarId: {carId}");
+          return matchingCar != null
+            ? this.Ok(matchingCar)
+            : this.NotFound($"Could not find car with CarId: {carId}");
         }
 
         [HttpPost]
