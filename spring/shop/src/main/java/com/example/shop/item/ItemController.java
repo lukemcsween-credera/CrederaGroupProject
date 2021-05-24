@@ -1,14 +1,14 @@
 package com.example.shop.item;
 
-import org.apache.catalina.connector.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
 public class ItemController {
 
     private final ItemService itemService;
@@ -25,7 +25,7 @@ public class ItemController {
     }
 
     @GetMapping("/item/{id}")
-    public ResponseEntity<Item> getItemById (@PathVariable(value="id") long itemId) {
+    public ResponseEntity<Item> getItemById(@PathVariable(value = "id") long itemId) {
         Item item = itemService.getItemById(itemId);
 
         if (item == null) {
