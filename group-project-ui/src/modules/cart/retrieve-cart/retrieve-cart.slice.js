@@ -52,7 +52,6 @@ export const retrieveCart = (cartId) => async (dispatch) => {
   } catch (err) {
     dispatch(retrieveCartError(err?.message));
   }
-  
 }
 
 export default retrieveCartSlice;

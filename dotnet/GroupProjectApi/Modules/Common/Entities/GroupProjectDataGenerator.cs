@@ -18,9 +18,9 @@ namespace GroupProjectApi.Modules.Common.Entities
                 if (!context.Products.Any())
                 {
                     context.Products.AddRange(
-                        new Product { ProductId = 1, Name = "Banana", Description = "A tasty yellow banana" },
-                        new Product { ProductId = 2, Name = "Apple", Description = "A delicious red banana" },
-                        new Product { ProductId = 3, Name = "Orange", Description = "A zesty orangish orange" }
+                        new Product { ProductId = 1, Name = "Banana", Description = "A tasty yellow banana", Price = 1.23m },
+                        new Product { ProductId = 2, Name = "Apple", Description = "A delicious red banana", Price = 2.50m },
+                        new Product { ProductId = 3, Name = "Orange", Description = "A zesty orangish orange", Price = 3.00m }
                     );
 
                     context.Carts.Add(
