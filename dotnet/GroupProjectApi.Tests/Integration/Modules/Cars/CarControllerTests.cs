@@ -18,7 +18,7 @@ namespace GroupProjectApi.Tests.Integration.Modules.Cars
         {
             var response = await _client.GetAsync("/cars");
             response.StatusCode.Should().Be(HttpStatusCode.OK);
-            var allCars = await response.Content.ReadFromJsonAsync<IEnumerable<CarDto>>();
+            var allCars = await response.Content.ReadFromJsonAsync<IEnumerable<GetCartResponseDto>>();
             allCars.Should().HaveCount(3);
         }
     }

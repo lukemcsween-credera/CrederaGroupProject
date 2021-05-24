@@ -10,7 +10,7 @@ namespace GroupProjectApi.Tests.Modules.Cars
     class CarsControllerIntegrationTests
     {
 
-        public CarsControllerIntegrationTests(CarsRepository carsRepo)
+        public CarsControllerIntegrationTests(CartRepository carsRepo)
         {
             
         }
