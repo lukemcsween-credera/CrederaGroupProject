@@ -50,6 +50,9 @@ namespace GroupProjectApi
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GroupProjectApi v1"));
                 app.InitiatlizeInMemoryGroupProjectDatabase();
+                // Typically, you should only allow the origin you expect to receive requests from depending on the environment
+                // e.g. AllowOrigins('http://localhost:3000'), but allowing all origins is fine for development practice purposes
+                app.UseCors(options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             }
 
             app.UseHttpsRedirection();
