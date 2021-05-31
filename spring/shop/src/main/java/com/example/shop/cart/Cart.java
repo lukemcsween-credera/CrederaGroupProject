@@ -44,4 +44,12 @@ public class Cart {
     public void setCartStatus(CartStatus cartStatus) {
         this.cartStatus = cartStatus;
     }
+
+    public void addCartItem(CartItem cartItem) {
+        this.cartItems.add(cartItem);
+    }
+
+    public double getSubtotal() {
+        return this.getCartItems().stream().mapToDouble(item -> item.getItem().getBasePrice() * item.getQuantity()).sum();
+    }
 }
