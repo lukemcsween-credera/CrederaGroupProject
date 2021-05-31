@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class CartController {
 
+    // Field based injection
     @Autowired
     private CartService cartService;
 
