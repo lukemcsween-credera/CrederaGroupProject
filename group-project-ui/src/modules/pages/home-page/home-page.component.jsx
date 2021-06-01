@@ -21,7 +21,8 @@ export const HomePageComponent = () => {
         ? (<div>Loading...</div>)
         : (
           <div>
-            <Button onClick={() => dispatch(retrieveCart(1))}>Retrieve Cart (Current CartId: {retrieveCartState?.response?.cartId})</Button>
+            <Button onClick={() => dispatch(retrieveCart(1))}>Retrieve Cart</Button>
+            <div>(Current CartId: {retrieveCartState?.response?.cartId})</div>
             <div>
               {JSON.stringify(retrieveCartState?.response)}
             </div>
