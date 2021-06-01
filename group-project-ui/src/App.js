@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import { HomePageComponent } from './modules/pages/home-page.component';
+import { RootLayout } from './modules/pages/layouts/root.layout';
 
 function App() {
   return (
-    <HomePageComponent />
+    <RootLayout />
   );
 }
 

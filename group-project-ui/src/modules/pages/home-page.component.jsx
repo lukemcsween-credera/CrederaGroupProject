@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
 import { retrieveCart } from '../cart/retrieve-cart/retrieve-cart.slice';
 import { RequestStatus } from '../common/redux/redux.constants';
+import { Button } from '@material-ui/core';
 
 export const HomePageComponent = () => {
 
@@ -9,15 +10,21 @@ export const HomePageComponent = () => {
   const retrieveCartState = useSelector(state => state.cart.retrieveCart);
 
   useEffect(() => {
+    // Example purposes only - should likely move retrieveCart call to a new 'cart' component
     dispatch(retrieveCart(1));
-  }, [dispatch]);
+  }, []);
 
   return (
     <div>
       Home Page
       {retrieveCartState.status === RequestStatus.LOADING
         ? (<div>Loading...</div>)
-        : (<div>{JSON.stringify(retrieveCartState?.response)}</div>)
+        : (
+          <div>
+            <Button onClick={() => dispatch(retrieveCart(1))}>Retrieve Cart (Current CartId: {retrieveCartState?.response?.cartId})</Button>
+            {JSON.stringify(retrieveCartState?.response)}
+          </div>
+        )
       }
     </div>
   );

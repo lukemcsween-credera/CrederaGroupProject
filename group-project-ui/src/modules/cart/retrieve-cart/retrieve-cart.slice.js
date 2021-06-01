@@ -9,6 +9,7 @@ const initialState = {
   requestParams: undefined
 }
 
+// https://redux-toolkit.js.org/tutorials/quick-start
 export const retrieveCartSlice = createSlice({
   // The name of the reducer which will become the base property for this slice's state (e.g. state.cart.retrieveCart)
   name: 'retrieveCart',
