@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect, useDispatch, useSelector } from 'react-redux';
-import { retrieveCart } from '../cart/retrieve-cart/retrieve-cart.slice';
-import { RequestStatus } from '../common/redux/redux.constants';
+import { retrieveCart } from '../../cart/retrieve-cart/retrieve-cart.slice';
+import { RequestStatus } from '../../common/redux/redux.constants';
 import { Button } from '@material-ui/core';
 
 export const HomePageComponent = () => {
@@ -22,7 +22,9 @@ export const HomePageComponent = () => {
         : (
           <div>
             <Button onClick={() => dispatch(retrieveCart(1))}>Retrieve Cart (Current CartId: {retrieveCartState?.response?.cartId})</Button>
-            {JSON.stringify(retrieveCartState?.response)}
+            <div>
+              {JSON.stringify(retrieveCartState?.response)}
+            </div>
           </div>
         )
       }

@@ -1,5 +1,5 @@
 import './App.css';
-import { RootLayout } from './modules/pages/layouts/root.layout';
+import RootLayout from './modules/pages/layouts/root.layout';
 
 function App() {
   return (

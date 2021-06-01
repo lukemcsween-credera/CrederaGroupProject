@@ -25,3 +25,5 @@ export const RootLayout = () => (
       </Switch>
   </Router>
 );
+
+export default RootLayout;

@@ -1,6 +1,6 @@
-import HomePageComponent from '../pages/home-page.component';
+import HomePageComponent from './home-page/home-page.component';
 
-// Example component to demonstrate routing between multiple pages
+// Example component to demonstrate routing with multiple pages
 const TestComp = () => (
   <div>Test</div>
 )
