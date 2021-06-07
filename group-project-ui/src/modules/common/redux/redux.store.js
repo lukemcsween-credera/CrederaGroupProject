@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { combineReducers, createStore } from "redux";
+import { combineReducers } from "redux";
 import cartReducer from "../../cart/cart.reducer";
 
 // Add reducers from other modules to the store here

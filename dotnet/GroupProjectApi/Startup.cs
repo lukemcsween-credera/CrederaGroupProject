@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GroupProjectApi.Modules.Carts;
 using GroupProjectApi.Modules.Common.Entities;
 using GroupProjectApi.Modules.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -49,7 +50,7 @@ namespace GroupProjectApi
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "GroupProjectApi v1"));
-                app.InitiatlizeInMemoryGroupProjectDatabase();
+                app.InitializeInMemoryGroupProjectDatabase();
                 // Typically, you should only allow the origin you expect to receive requests from depending on the environment
                 // e.g. AllowOrigins('http://localhost:3000'), but allowing all origins is fine for development practice purposes
                 app.UseCors(options => options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());

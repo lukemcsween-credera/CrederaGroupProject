@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 namespace GroupProjectApi.Modules.Carts
 {
     [TransientService]
-    public class CartService
+    public class CartsService
     {
         private readonly CartsRepository _cartRepo;
 
-        public CartService(CartsRepository cartRepo)
+        public CartsService(CartsRepository cartRepo)
         {
             _cartRepo = cartRepo;
         }

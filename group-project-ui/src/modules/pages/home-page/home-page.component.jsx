@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { connect, useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { retrieveCart } from '../../cart/retrieve-cart/retrieve-cart.slice';
 import { RequestStatus } from '../../common/redux/redux.constants';
 import { Button } from '@material-ui/core';
@@ -11,14 +11,15 @@ export const HomePageComponent = () => {
 
   useEffect(() => {
     // Example purposes only - should likely move retrieveCart call to a new 'cart' component
-    dispatch(retrieveCart(1));
+    // retrieveCart(1)
+    dispatch({ 'neato': 'potato'});
   }, []);
 
   return (
     <div>
       Home Page
       {retrieveCartState.status === RequestStatus.LOADING
-        ? (<div>Loading...</div>)
+        ? (<div data-testid='loading-spinner'>Loading...</div>)
         : (
           <div>
             <Button onClick={() => dispatch(retrieveCart(1))}>Retrieve Cart</Button>
@@ -33,6 +34,4 @@ export const HomePageComponent = () => {
   );
 }
 
-export default connect(
-  
-)(HomePageComponent);
+export default HomePageComponent;

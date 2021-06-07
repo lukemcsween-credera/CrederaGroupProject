@@ -13,16 +13,16 @@ namespace GroupProjectApi.Modules.Carts
     public class CartsController : ControllerBase
     {
         private readonly ILogger<CartsController> _logger;
-        private readonly CartService _cartService;
+        private readonly CartsService _cartService;
 
-        public CartsController(ILogger<CartsController> logger, CartService cartService)
+        public CartsController(ILogger<CartsController> logger, CartsService cartService)
         {
             _logger = logger;
             _cartService = cartService;
         }
 
         [HttpGet("{cartId}")]
-        public ActionResult<IEnumerable<CartDto>> GetCartById(int cartId)
+        public ActionResult<CartDto> GetCartById(int cartId)
         {
             _logger.LogInformation($"Retrieving cart (cartId: {cartId})");
             var cart = _cartService.GetCart(cartId);

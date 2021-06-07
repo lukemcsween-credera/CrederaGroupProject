@@ -18,17 +18,19 @@ namespace GroupProjectApi.Tests.Integration
 
         protected IntegrationTest()
         {
-            var appFactory = new WebApplicationFactory<Startup>();
-                //.WithWebHostBuilder(builder =>
-                //    builder.ConfigureServices(services => {
-                //        services.RemoveAll(typeof(GroupProjectDataContext));
-                //        services.AddDbContext<GroupProjectDataContext>(options =>
-                //        {
-                //            options.UseInMemoryDatabase("IntegrationDb");
-                //        });
-                //    })
-                //);
+            var appFactory = new WebApplicationFactory<Startup>()
+                .WithWebHostBuilder(builder =>
+                    builder.ConfigureServices(services =>
+                    {
+                        services.RemoveAll(typeof(GroupProjectDbContext));
+                        services.AddDbContext<GroupProjectDbContext>(options =>
+                        {
+                            options.UseInMemoryDatabase("IntegrationDb");
+                        });
+                    })
+                );
             _client = appFactory.CreateClient();
         }
+
     }
 }
