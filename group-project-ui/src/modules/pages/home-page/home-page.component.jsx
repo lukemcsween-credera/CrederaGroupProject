@@ -11,8 +11,7 @@ export const HomePageComponent = () => {
 
   useEffect(() => {
     // Example purposes only - should likely move retrieveCart call to a new 'cart' component
-    // retrieveCart(1)
-    dispatch({ 'neato': 'potato'});
+    dispatch(retrieveCart(1));
   }, []);
 
   return (
