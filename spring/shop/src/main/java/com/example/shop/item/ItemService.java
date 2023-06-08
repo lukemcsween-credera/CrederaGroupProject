@@ -23,7 +23,4 @@ public class ItemService {
         return itemRepository.findById(id).orElse(null);
     }
 
-    public List<Item> getItemsByName(String search) {
-        return itemRepository.findByItemContaining(search);
-    }
 }
