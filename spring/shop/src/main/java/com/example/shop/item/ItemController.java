@@ -37,8 +37,4 @@ public class ItemController {
 
 
     //TODO: add any other item-related endpoints you might need
-    @GetMapping("/item/{search}")
-    public ResponseEntity<List<Item>> getItemsByName(@PathVariable(value = "search") String search) {
-        return ResponseEntity.ok(itemService.getItemsByName(search));
-    }
 }
