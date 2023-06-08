@@ -1,0 +1,27 @@
+[
+  {
+    "name": "Habanero Inferno Sauce",
+    "description": "Experience the fiery heat of habanero peppers in this intense hot sauce. Made with hand-picked habaneros for maximum flavor and heat.",
+    "image": "https://example.com/habanero_inferno_sauce.jpg"
+  },
+  {
+    "name": "Ghost Pepper Blaze Sauce",
+    "description": "Get ready for a taste adventure with the scorching heat of ghost peppers. This sauce will leave you breathless with its intense spiciness.",
+    "image": "https://example.com/ghost_pepper_blaze_sauce.jpg"
+  },
+  {
+    "name": "Carolina Reaper Fury Sauce",
+    "description": "Feel the wrath of the Carolina Reaper, one of the hottest peppers in the world. This sauce is not for the faint-hearted!",
+    "image": "https://example.com/carolina_reaper_fury_sauce.jpg"
+  },
+  {
+    "name": "Sriracha Sensation Sauce",
+    "description": "Indulge in the tangy and spicy goodness of Sriracha sauce. Perfect for adding a kick to your favorite dishes.",
+    "image": "https://example.com/sriracha_sensation_sauce.jpg"
+  },
+  {
+    "name": "Jalapeno Zing Sauce",
+    "description": "Discover the delightful balance of heat and flavor with this zesty Jalapeno sauce. Adds a kick to any meal without overpowering the taste buds.",
+    "image": "https://example.com/jalapeno_zing_sauce.jpg"
+  }
+]
