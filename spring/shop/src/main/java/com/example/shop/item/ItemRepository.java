@@ -13,6 +13,4 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
         basic DB CRUD functionalities built in. See JPA docs for details.
         TODO: add any needed custom repository methods
      */
-    @Query("SELECT i FROM items WHERE i.item_name LIKE %:search%")
-    public List<Item> findByItemContaining(@Param("search") String search);
 }
