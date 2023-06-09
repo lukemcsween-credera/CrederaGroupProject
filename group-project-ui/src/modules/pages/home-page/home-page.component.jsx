@@ -16,12 +16,13 @@ export const HomePageComponent = () => {
 
   return (
     <div>
-      Home Page
+      <h1>Bronance Holdings Hot Sauces</h1>
       <div>
+        
       <Button color="primary" className="px-4"
                 onClick={routeChange}
                   >
-                  Login
+                  Show me da sauce
                 </Button>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom/cjs/react-router-dom.min';
 
 export const DisplayComponent = (props) => {
 
@@ -7,7 +8,7 @@ export const DisplayComponent = (props) => {
     const description = "props.description";
     const price = "props.price";
     const inStock = "props.number";
-
+    
     return (
         <div>
             Display Page
