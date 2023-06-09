@@ -5,6 +5,7 @@ import Data from './Data.json';
 import { useHistory } from "react-router-dom";
 import { Button } from '@material-ui/core';
 
+
 export const HackerNewsStoriesWithSearch = () => {
   const [stories, setStories] = useState([]);
   const [allStories, setAllStories] = useState([]);
@@ -33,10 +34,12 @@ export const HackerNewsStoriesWithSearch = () => {
 
       const history = useHistory();
   
-      const routeChange = () =>{ 
-        let path = `/Display`; 
-        history.push(path);
-      }
+  const routeChange = () =>{ 
+    let path = `/Display`; 
+      history.push(path);
+  }
+
+
 
   const updateKeyword = (keyword) => {
     const filtered = allStories.filter(story => {
@@ -66,7 +69,7 @@ export const HackerNewsStoriesWithSearch = () => {
       <Button color="primary" className="px-4"
                 onClick={routeChange}
                   >
-                  Show me da sauce
+                  Show me sauce
                 </Button>
       </div>
     </div>
