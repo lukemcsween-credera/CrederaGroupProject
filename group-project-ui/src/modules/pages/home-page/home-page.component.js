@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import HackerNewsStories from './HackerNewsStories';
 import SearchBar from './search-bar.component';
 import Data from './Data.json';
+import { useHistory } from "react-router-dom";
+import { Button } from '@material-ui/core';
 
 export const HackerNewsStoriesWithSearch = () => {
   const [stories, setStories] = useState([]);
@@ -29,6 +31,13 @@ export const HackerNewsStoriesWithSearch = () => {
         }
       };
 
+      const history = useHistory();
+  
+      const routeChange = () =>{ 
+        let path = `/Display`; 
+        history.push(path);
+      }
+
   const updateKeyword = (keyword) => {
     const filtered = allStories.filter(story => {
      return `${story.itemName.toLowerCase()} ${story.description.toLowerCase()}`.includes(keyword.toLowerCase());
@@ -49,6 +58,17 @@ export const HackerNewsStoriesWithSearch = () => {
       {error && <div>{`Problem fetching Sauces - ${error}`}</div>}
       <SearchBar keyword={keyword} onChange={updateKeyword}/>
       <HackerNewsStories stories={stories} />
+
+
+      <h1>Bronance Holdings Hot Sauces</h1>
+      <div>
+        
+      <Button color="primary" className="px-4"
+                onClick={routeChange}
+                  >
+                  Show me da sauce
+                </Button>
+      </div>
     </div>
     </>
   )
