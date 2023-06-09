@@ -13,7 +13,7 @@ const mockState = {
 
 describe('home-page.component.jsx', () => {
   const dispatchMock = jest.fn();
-  
+
   beforeEach(() => {
     // Mock the useSelector implementation to pass our mock state object - component should traverse the object as designed
     jest.spyOn(Redux, 'useSelector').mockImplementation(selector => selector(mockState));

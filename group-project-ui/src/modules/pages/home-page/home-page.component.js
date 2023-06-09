@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import HackerNewsStories from './HackerNewsStories';
 import SearchBar from './search-bar.component';
-
+import Data from './Data.json';
 
 export const HackerNewsStoriesWithSearch = () => {
   const [stories, setStories] = useState([]);
@@ -10,24 +10,28 @@ export const HackerNewsStoriesWithSearch = () => {
   const [error, setError] = useState(null);
   const [keyword, setKeyword] = useState('');
 
-  const fetchStories = async () => {
-    try {
-      const data = await (await fetch('https://hn.algolia.com/api/v1/search_by_date?tags=front_page&hitsPerPage=20')).json();
-      const stortedStories = data.hits.sort((story, nextStory) => (story.points < nextStory.points ? 1 : -1));
-      setAllStories(stortedStories);
-      setStories(stortedStories);
-      setError(null);
-    } catch (err) {
-      setError(err.message);
-      setStories(null);
-    } finally {
-      setLoading(false);
-    }
-  };
+    const fetchStories = async () => {
+        try {
+          const data = Data;
+          const stortedSauces = data.HotSauce.sort((story, nextStory) => (story.points < nextStory.points ? 1 : -1));
+          console.log(stortedSauces)
+          //setAllStories(data);
+          //setStories(data);
+          setAllStories(stortedSauces);
+          setStories(stortedSauces);
+          setError(null);
+          console.log(data);
+        } catch (err) {
+          setError(err.message);
+          setStories(null);
+        } finally {
+          setLoading(false);
+        }
+      };
 
   const updateKeyword = (keyword) => {
     const filtered = allStories.filter(story => {
-     return `${story.title.toLowerCase()} ${story.author.toLowerCase()}`.includes(keyword.toLowerCase());
+     return `${story.itemName.toLowerCase()} ${story.description.toLowerCase()}`.includes(keyword.toLowerCase());
     })
     setKeyword(keyword);
     setStories(filtered);

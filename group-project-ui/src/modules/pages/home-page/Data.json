@@ -1,27 +1,35 @@
-[
+{"HotSauce": [
+
   {
-    "name": "Habanero Inferno Sauce",
-    "description": "Experience the fiery heat of habanero peppers in this intense hot sauce. Made with hand-picked habaneros for maximum flavor and heat.",
-    "image": "https://example.com/habanero_inferno_sauce.jpg"
+    "id": "1",
+    "itemName": "Tabasco",
+    "description": "Super spice!",
+    "basePrice": "4.99"
   },
   {
-    "name": "Ghost Pepper Blaze Sauce",
-    "description": "Get ready for a taste adventure with the scorching heat of ghost peppers. This sauce will leave you breathless with its intense spiciness.",
-    "image": "https://example.com/ghost_pepper_blaze_sauce.jpg"
+    "id": "2",
+    "itemName": "Cholula",
+    "description": "Sweet habenero sauce",
+    "basePrice": "3.49"
   },
   {
-    "name": "Carolina Reaper Fury Sauce",
-    "description": "Feel the wrath of the Carolina Reaper, one of the hottest peppers in the world. This sauce is not for the faint-hearted!",
-    "image": "https://example.com/carolina_reaper_fury_sauce.jpg"
+    "id": "3",
+    "itemName": "Habenero",
+    "description": "Crazy spicy!",
+    "basePrice": "6.99"
   },
   {
-    "name": "Sriracha Sensation Sauce",
-    "description": "Indulge in the tangy and spicy goodness of Sriracha sauce. Perfect for adding a kick to your favorite dishes.",
-    "image": "https://example.com/sriracha_sensation_sauce.jpg"
+    "id": "4",
+    "itemName": "Louisiana Hot Sauce",
+    "description": "Made with aged hot peppers and vinegar",
+    "basePrice": "4.99"
   },
   {
-    "name": "Jalapeno Zing Sauce",
-    "description": "Discover the delightful balance of heat and flavor with this zesty Jalapeno sauce. Adds a kick to any meal without overpowering the taste buds.",
-    "image": "https://example.com/jalapeno_zing_sauce.jpg"
+    "id": "5",
+    "itemName": "Valentina",
+    "description": "Salsa picante",
+    "basePrice": "7.89"
   }
 ]
+
+}
