@@ -1,0 +1,35 @@
+{"HotSauce": [
+
+  {
+    "id": "1",
+    "itemName": "Tabasco",
+    "description": "Super spice!",
+    "basePrice": "4.99"
+  },
+  {
+    "id": "2",
+    "itemName": "Cholula",
+    "description": "Sweet habenero sauce",
+    "basePrice": "3.49"
+  },
+  {
+    "id": "3",
+    "itemName": "Habenero",
+    "description": "Crazy spicy!",
+    "basePrice": "6.99"
+  },
+  {
+    "id": "4",
+    "itemName": "Louisiana Hot Sauce",
+    "description": "Made with aged hot peppers and vinegar",
+    "basePrice": "4.99"
+  },
+  {
+    "id": "5",
+    "itemName": "Valentina",
+    "description": "Salsa picante",
+    "basePrice": "7.89"
+  }
+]
+
+}
