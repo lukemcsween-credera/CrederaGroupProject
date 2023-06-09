@@ -14,7 +14,7 @@
 	<name>shop</name>
 	<description>E-commerce demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -32,10 +32,10 @@
 		</dependency>
 		<!--TODO: Sub this out for another database-->
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
+        	<groupId>org.postgresql</groupId>
+        	<artifactId>postgresql</artifactId>
+        	<version>42.3.1</version>
+    	</dependency>
 	</dependencies>
 
 	<build>

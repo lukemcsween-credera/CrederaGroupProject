@@ -1,4 +1,4 @@
-package com.example.shop.common.util;
+/*package com.example.shop.common.util;
 
 import com.example.shop.cart.Cart;
 import com.example.shop.cart.CartItem;
@@ -52,4 +52,4 @@ public class SampleDataRunner implements ApplicationRunner {
         cartRepository.save(cart);
     }
 
-}
+}*/
