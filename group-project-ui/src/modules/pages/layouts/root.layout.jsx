@@ -10,14 +10,14 @@ import rootRoutes from '../pages.config';
 // https://reactrouter.com/web/guides/quick-start
 export const RootLayout = () => (
   <Router>
-      <ul>
-        {/* Finds all routes with defined linkText property */}
+      { <ul>
+        
         {rootRoutes.filter(route => !!route.linkText).map((route, index) => (
           <li key={index}>
            <Link to={route.path}>{route.linkText}</Link>
          </li>
         ))}
-      </ul>
+      </ul> }
       <Switch>
         {rootRoutes.map((route, index) => (
           <Route exact={route.exact} key={index} path={route.path} component={route.routeComponent} />
